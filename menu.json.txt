@@ -1,0 +1,695 @@
+[
+  {
+    "day": "Sunday",
+    "meals": {
+      "Breakfast": [
+        {
+          "category": "Beverages",
+          "items": [
+            {
+              "name": "Tea",
+              "price": 15
+            },
+            {
+              "name": "Coffee",
+              "price": 20
+            }
+          ]
+        },
+        {
+          "category": "Quick Bites",
+          "items": [
+            {
+              "name": "Idli",
+              "price": 25
+            },
+            {
+              "name": "Vada",
+              "price": 20
+            }
+          ]
+        }
+      ],
+      "Lunch": [
+        {
+          "category": "Main Course",
+          "items": [
+            {
+              "name": "Veg Biryani",
+              "price": 80
+            },
+            {
+              "name": "Roti",
+              "price": 10
+            },
+            {
+              "name": "Dal Fry",
+              "price": 40
+            },
+            {
+              "name": "Paneer Butter Masala",
+              "price": 100
+            }
+          ]
+        },
+        {
+          "category": "Dosa",
+          "items": [
+            {
+              "name": " https://upload.wikimedia.org/wikipedia/commons/4/4b/Masala_Dosa.jpg",
+              "price": 30
+            }
+          ]
+        }
+      ],
+      "Snacks": [
+        {
+          "category": "Snacks",
+          "items": [
+            {
+              "name": "Samosa",
+              "price": 15
+            },
+            {
+              "name": "Cutlet",
+              "price": 20
+            },
+            {
+              "name": "Puff",
+              "price": 25
+            },
+            {
+              "name": "Veg Sandwich",
+              "price": 30
+            }
+          ]
+        }
+      ],
+      "Dinner": [
+        {
+          "category": "Main Course",
+          "items": [
+            {
+              "name": "Fried Rice",
+              "price": 70
+            },
+            {
+              "name": "Manchurian",
+              "price": 60
+            },
+            {
+              "name": "Chapathi",
+              "price": 10
+            },
+            {
+              "name": "Mixed Veg Curry",
+              "price": 55
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "day": "Monday",
+    "meals": {
+      "Breakfast": [
+        {
+          "category": "Quick Bites",
+          "items": [
+            {
+              "name": "Poha",
+              "price": 20
+            },
+            {
+              "name": "Upma",
+              "price": 20
+            },
+            {
+              "name": "Dosa",
+              "price": 30
+            },
+            {
+              "name": "Filter Coffee",
+              "price": 25
+            }
+          ]
+        }
+      ],
+      "Lunch": [
+        {
+          "category": "Main Course",
+          "items": [
+            {
+              "name": "Rajma Chawal",
+              "price": 60
+            },
+            {
+              "name": "Chapathi",
+              "price": 10
+            },
+            {
+              "name": "Aloo Curry",
+              "price": 35
+            },
+            {
+              "name": "Raita",
+              "price": 15
+            }
+          ]
+        }
+      ],
+      "Snacks": [
+        {
+          "category": "Street Food",
+          "items": [
+            {
+              "name": "Pani Puri",
+              "price": 20
+            },
+            {
+              "name": "Bhel Puri",
+              "price": 25
+            },
+            {
+              "name": "Aloo Tikki",
+              "price": 30
+            },
+            {
+              "name": "Lassi",
+              "price": 30
+            }
+          ]
+        }
+      ],
+      "Dinner": [
+        {
+          "category": "North Indian",
+          "items": [
+            {
+              "name": "Naan",
+              "price": 15
+            },
+            {
+              "name": "Palak Paneer",
+              "price": 90
+            },
+            {
+              "name": "Jeera Rice",
+              "price": 50
+            },
+            {
+              "name": "Tomato Soup",
+              "price": 25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "day": "Tuesday",
+    "meals": {
+      "Breakfast": [
+        {
+          "category": "South Indian",
+          "items": [
+            {
+              "name": "Dosa",
+              "price": 30
+            },
+            {
+              "name": "Idli",
+              "price": 20
+            },
+            {
+              "name": "Pongal",
+              "price": 25
+            },
+            {
+              "name": "Sambar Vada",
+              "price": 30
+            }
+          ]
+        }
+      ],
+      "Lunch": [
+        {
+          "category": "Thali",
+          "items": [
+            {
+              "name": "Veg Thali",
+              "price": 100
+            },
+            {
+              "name": "Dal",
+              "price": 40
+            },
+            {
+              "name": "Rice",
+              "price": 20
+            },
+            {
+              "name": "Pickle",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "Snacks": [
+        {
+          "category": "Bakery",
+          "items": [
+            {
+              "name": "Muffin",
+              "price": 20
+            },
+            {
+              "name": "Donut",
+              "price": 30
+            },
+            {
+              "name": "Croissant",
+              "price": 25
+            },
+            {
+              "name": "Milkshake",
+              "price": 35
+            }
+          ]
+        }
+      ],
+      "Dinner": [
+        {
+          "category": "Chinese",
+          "items": [
+            {
+              "name": "Hakka Noodles",
+              "price": 60
+            },
+            {
+              "name": "Gobi Manchurian",
+              "price": 50
+            },
+            {
+              "name": "Fried Rice",
+              "price": 70
+            },
+            {
+              "name": "Spring Rolls",
+              "price": 40
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "day": "Wednesday",
+    "meals": {
+      "Breakfast": [
+        {
+          "category": "North Indian",
+          "items": [
+            {
+              "name": "Aloo Paratha",
+              "price": 35
+            },
+            {
+              "name": "Curd",
+              "price": 10
+            },
+            {
+              "name": "Chai",
+              "price": 15
+            },
+            {
+              "name": "Boiled Egg",
+              "price": 10
+            }
+          ]
+        }
+      ],
+      "Lunch": [
+        {
+          "category": "South Indian",
+          "items": [
+            {
+              "name": "Sambar Rice",
+              "price": 50
+            },
+            {
+              "name": "Rasam",
+              "price": 20
+            },
+            {
+              "name": "Beans Poriyal",
+              "price": 25
+            },
+            {
+              "name": "Papad",
+              "price": 10
+            }
+          ]
+        }
+      ],
+      "Snacks": [
+        {
+          "category": "Fried Snacks",
+          "items": [
+            {
+              "name": "Pakoda",
+              "price": 20
+            },
+            {
+              "name": "Mirchi Bajji",
+              "price": 25
+            },
+            {
+              "name": "Onion Rings",
+              "price": 30
+            },
+            {
+              "name": "Lemon Soda",
+              "price": 15
+            }
+          ]
+        }
+      ],
+      "Dinner": [
+        {
+          "category": "Mixed",
+          "items": [
+            {
+              "name": "Khichdi",
+              "price": 60
+            },
+            {
+              "name": "Curd Rice",
+              "price": 45
+            },
+            {
+              "name": "Roti",
+              "price": 10
+            },
+            {
+              "name": "Paneer Curry",
+              "price": 90
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "day": "Thursday",
+    "meals": {
+      "Breakfast": [
+        {
+          "category": "Healthy",
+          "items": [
+            {
+              "name": "Fruit Bowl",
+              "price": 35
+            },
+            {
+              "name": "Sprouts",
+              "price": 25
+            },
+            {
+              "name": "Oats",
+              "price": 30
+            },
+            {
+              "name": "Green Tea",
+              "price": 15
+            }
+          ]
+        }
+      ],
+      "Lunch": [
+        {
+          "category": "North Indian",
+          "items": [
+            {
+              "name": "Paneer Tikka",
+              "price": 90
+            },
+            {
+              "name": "Veg Pulao",
+              "price": 60
+            },
+            {
+              "name": "Naan",
+              "price": 15
+            },
+            {
+              "name": "Butter Dal",
+              "price": 50
+            }
+          ]
+        }
+      ],
+      "Snacks": [
+        {
+          "category": "Tiffins",
+          "items": [
+            {
+              "name": "Mini Dosa",
+              "price": 25
+            },
+            {
+              "name": "Uttapam",
+              "price": 30
+            },
+            {
+              "name": "Kachori",
+              "price": 20
+            },
+            {
+              "name": "Tea",
+              "price": 15
+            }
+          ]
+        }
+      ],
+      "Dinner": [
+        {
+          "category": "Light Meals",
+          "items": [
+            {
+              "name": "Upma",
+              "price": 30
+            },
+            {
+              "name": "Idli",
+              "price": 20
+            },
+            {
+              "name": "Tomato Soup",
+              "price": 25
+            },
+            {
+              "name": "Chapathi",
+              "price": 10
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "day": "Friday",
+    "meals": {
+      "Breakfast": [
+        {
+          "category": "Desi",
+          "items": [
+            {
+              "name": "Poori",
+              "price": 30
+            },
+            {
+              "name": "Chana Masala",
+              "price": 40
+            },
+            {
+              "name": "Halwa",
+              "price": 20
+            },
+            {
+              "name": "Buttermilk",
+              "price": 10
+            }
+          ]
+        }
+      ],
+      "Lunch": [
+        {
+          "category": "Mixed",
+          "items": [
+            {
+              "name": "Rice",
+              "price": 20
+            },
+            {
+              "name": "Bhindi Fry",
+              "price": 35
+            },
+            {
+              "name": "Dal Tadka",
+              "price": 40
+            },
+            {
+              "name": "Boondi Raita",
+              "price": 20
+            }
+          ]
+        }
+      ],
+      "Snacks": [
+        {
+          "category": "Sweet & Savory",
+          "items": [
+            {
+              "name": "Kaju Katli",
+              "price": 50
+            },
+            {
+              "name": "Chakli",
+              "price": 20
+            },
+            {
+              "name": "Banana Chips",
+              "price": 15
+            },
+            {
+              "name": "Badam Milk",
+              "price": 30
+            }
+          ]
+        }
+      ],
+      "Dinner": [
+        {
+          "category": "Full Meal",
+          "items": [
+            {
+              "name": "Paratha",
+              "price": 15
+            },
+            {
+              "name": "Mixed Veg Curry",
+              "price": 55
+            },
+            {
+              "name": "Rice",
+              "price": 20
+            },
+            {
+              "name": "Lassi",
+              "price": 25
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "day": "Saturday",
+    "meals": {
+      "Breakfast": [
+        {
+          "category": "Combo",
+          "items": [
+            {
+              "name": "Dosa",
+              "price": 30
+            },
+            {
+              "name": "Vada",
+              "price": 20
+            },
+            {
+              "name": "Sambar",
+              "price": 20
+            },
+            {
+              "name": "Coffee",
+              "price": 15
+            }
+          ]
+        }
+      ],
+      "Lunch": [
+        {
+          "category": "Weekend Special",
+          "items": [
+            {
+              "name": "Paneer Biryani",
+              "price": 100
+            },
+            {
+              "name": "Curd",
+              "price": 10
+            },
+            {
+              "name": "Onion Salad",
+              "price": 10
+            },
+            {
+              "name": "Soft Drink",
+              "price": 20
+            }
+          ]
+        }
+      ],
+      "Snacks": [
+        {
+          "category": "Crispy",
+          "items": [
+            {
+              "name": "French Fries",
+              "price": 30
+            },
+            {
+              "name": "Cheese Balls",
+              "price": 35
+            },
+            {
+              "name": "Nachos",
+              "price": 40
+            },
+            {
+              "name": "Choco Milkshake",
+              "price": 35
+            }
+          ]
+        }
+      ],
+      "Dinner": [
+        {
+          "category": "Dinner Set",
+          "items": [
+            {
+              "name": "Chapathi",
+              "price": 10
+            },
+            {
+              "name": "Paneer Curry",
+              "price": 80
+            },
+            {
+              "name": "Rice",
+              "price": 20
+            },
+            {
+              "name": "Kheer",
+              "price": 40
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

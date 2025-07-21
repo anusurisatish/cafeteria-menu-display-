@@ -1,0 +1,146 @@
+import streamlit as st
+import json
+import os
+
+# --- Load and Save ---
+def load_menu():
+    if os.path.exists("menu.json"):
+        with open("menu.json", "r") as f:
+            return json.load(f)
+    return []
+
+def save_menu(data):
+    with open("menu.json", "w") as f:
+        json.dump(data, f, indent=2)
+
+# --- Get menu for a specific day ---
+def get_day_entry(data, day):
+    for entry in data:
+        if entry["day"] == day:
+            return entry
+    return None
+
+# --- Add item to a specific day, meal and category ---
+def add_item(data, day, meal, category, name, price):
+    day_entry = get_day_entry(data, day)
+    if not day_entry:
+        # If day not found, create structure
+        data.append({
+            "day": day,
+            "meals": {
+                "Breakfast": [],
+                "Lunch": [],
+                "Snacks": [],
+                "Dinner": []
+            }
+        })
+        day_entry = get_day_entry(data, day)
+
+    meal_data = day_entry["meals"][meal]
+
+    for cat in meal_data:
+        if cat["category"].lower() == category.lower():
+            cat["items"].append({"name": name, "price": price})
+            return data
+
+    # If category not found
+    meal_data.append({
+        "category": category,
+        "items": [{"name": name, "price": price}]
+    })
+
+    return data
+
+# --- Themes ---
+THEMES = {
+    "Default (Light)": {"bg": "#ffffff", "text": "#000000", "accent": "#007bff"},
+    "Dark Mode": {"bg": "#1e1e1e", "text": "#f5f5f5", "accent": "#00bcd4"},
+    "Blue Theme": {"bg": "#e3f2fd", "text": "#0d47a1", "accent": "#1976d2"},
+    "Green Theme": {"bg": "#e8f5e9", "text": "#1b5e20", "accent": "#43a047"},
+    "Yellow Theme": {"bg": "#fffde7", "text": "#f57f17", "accent": "#fbc02d"},
+    "Violet Theme": {"bg": "#f3e5f5", "text": "#4a148c", "accent": "#7b1fa2"}
+}
+
+# --- Load Menu ---
+menu_data = load_menu()
+
+st.set_page_config(page_title="Cafeteria Weekly Menu", layout="wide")
+
+# Theme Selector
+st.sidebar.title("🎨 Theme Selector")
+selected_theme = st.sidebar.selectbox("Choose Theme", list(THEMES.keys()))
+theme = THEMES[selected_theme]
+# --- Admin Login (Simple Password) ---
+st.sidebar.title("🔐 Admin Access")
+admin_password = st.sidebar.text_input("Enter Admin Password", type="password")
+is_admin = admin_password == "cafemaster123"  # You can change this password
+
+
+# Inject custom CSS
+st.markdown(f"""
+    <style>
+        body {{
+            background-color: {theme['bg']} !important;
+            color: {theme['text']} !important;
+        }}
+        .stApp {{
+            background-color: {theme['bg']} !important;
+        }}
+        h1, h2, h3, h4, h5, h6, p, label, div, span {{
+            color: {theme['text']} !important;
+        }}
+        .stButton>button {{
+            background-color: {theme['accent']} !important;
+            color: white !important;
+            border-radius: 8px !important;
+        }}
+    </style>
+""", unsafe_allow_html=True)
+
+st.title("📅 Cafeteria Weekly Menu")
+
+tab1, tab2 = st.tabs(["📖 View Menu", "➕ Add Item"])
+
+# --- VIEW TAB ---
+with tab1:
+    view_day = st.selectbox("📆 Select Day", [d["day"] for d in menu_data])
+    meal_options = ["Breakfast", "Lunch", "Snacks", "Dinner"]
+    selected_meal = st.radio("🍽️ Select Meal", meal_options, horizontal=True)
+
+entry = get_day_entry(menu_data, view_day)
+if entry and selected_meal in entry["meals"]:
+        meal_data = entry["meals"][selected_meal]
+        if meal_data:
+            for cat in meal_data:
+                st.subheader(cat["category"])
+                for idx, item in enumerate(cat["items"]):
+                    col1, col2 = st.columns([6, 1])
+                    with col1:
+                        st.write(f"🍴 {item['name']} — ₹{item['price']}")
+                    with col2:
+                        if is_admin:
+                            if st.button("🗑️", key=f"delete_{view_day}_{selected_meal}_{cat['category']}_{idx}"):
+                                cat["items"].pop(idx)
+                                save_menu(menu_data)
+                                st.experimental_rerun()
+        else:
+            st.info("No items yet in this meal.")
+else:
+        st.warning("Meal data not found.")
+# --- ADD TAB ---
+with tab2:
+    st.subheader("➕ Add Item")
+
+    add_day = st.selectbox("📆 Day", ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"])
+    add_meal = st.radio("🍽️ Meal", ["Breakfast", "Lunch", "Snacks", "Dinner"], horizontal=True)
+    add_category = st.text_input("🧾 Category (e.g. Main Course)")
+    add_name = st.text_input("🍴 Item Name")
+    add_price = st.number_input("💰 Price", min_value=0, step=1)
+
+    if st.button("Add Item"):
+        if add_category and add_name and add_price > 0:
+            menu_data = add_item(menu_data, add_day, add_meal, add_category, add_name, add_price)
+            save_menu(menu_data)
+            st.success(f"✅ Added {add_name} to {add_day} > {add_meal}")
+        else:
+            st.error("❌ Please fill all fields.")
